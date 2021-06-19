@@ -6,11 +6,15 @@
 /* Components */
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
 
 /* Screens */
 @import "screens/login.css";
+@import "screens/friends.css";
 
 /* 전체에 적용되는  효과는 styles.css 에 직접넣는 식으로 하면 구분 쉬움 */
 body {
+  color: #2e363e;
   font-family: "Open Sans", sans-serif;
 }
