@@ -13,6 +13,7 @@
 /* Screens */
 @import "screens/login.css";
 @import "screens/friends.css";
+@import "screens/find.css"; /*chats는 css파일 생성없이 클래스 재사용하여 해결됨.*/
 
 /* 전체에 적용되는  효과는 styles.css 에 직접넣는 식으로 하면 구분 쉬움 */
 body {

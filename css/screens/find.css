@@ -1,0 +1,123 @@
+.find-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.find-icons__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.find-icons__icon i {
+  font-size: 35px; /* 이걸로도 아이콘 크기 조절됨. font awasome 클래스 사용안하더라도 */
+}
+
+.find-icons__icon span {
+  margin-top: 18px;
+}
+
+.recommended-friends {
+  margin: 25px 0px;
+  padding: 25px 0px;
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+}
+
+.recommended-friends__title {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.recommended-friends span {
+  margin: 100px 0;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+.open-chat__header span {
+  opacity: 0.6;
+}
+
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.open-post__title {
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.open-post__hashtags {
+  text-transform: uppercase; /*대문자로 변경. html은 소문자로*/
+  opacity: 0.6;
+}
+
+.open-post__members {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.open-post__members img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.open-post__member-count {
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.open-post__members .divider {
+  /*또는 html에서 태그없이 | 로 적어도 됨*/
+  /*모든 divider 클래스가 아닌 open-post__members 아래의 divider에만 적용*/
+  width: 2px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.open-post__member-status {
+  color: #ffb0e0;
+}
+
+.open-post__photo {
+  position: relative;
+}
+
+.open-post__photo img {
+  width: 110px;
+  height: 110px;
+  border-radius: 10px;
+}
+
+.open-post__heart-count {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+}
+
+.open-post__heart-count span {
+  margin-left: 3px;
+}
