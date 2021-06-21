@@ -1,22 +1,3 @@
-.find-icons {
-  display: flex;
-  justify-content: space-between;
-}
-
-.find-icons__icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.find-icons__icon i {
-  font-size: 35px; /* 이걸로도 아이콘 크기 조절됨. font awasome 클래스 사용안하더라도 */
-}
-
-.find-icons__icon span {
-  margin-top: 18px;
-}
-
 .recommended-friends {
   margin: 25px 0px;
   padding: 25px 0px;
