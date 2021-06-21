@@ -28,3 +28,27 @@
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.5);
 }
+
+@keyframes hideSplashScreen {
+  from {
+    apacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden; /* css로는 html 요소를 삭제할 순없으므로 앞에 나오는걸 가리는 식으로 해결. 아니면 아이콘 클릭 안됨.*/
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute; /*body에 정렬. 맨앞으로 나옴*/
+  height: 100vh; /*화면높이의 100%*/
+  width: 100vw; /*화면 넓이의 100%*/
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 132px;
+  animation: hideSplashScreen 0.4s ease-in-out forwards;
+  animation-delay: 2s;
+}

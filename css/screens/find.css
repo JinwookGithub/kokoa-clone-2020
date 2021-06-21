@@ -102,3 +102,24 @@
 .open-post__heart-count span {
   margin-left: 3px;
 }
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform; /* 없으면 animation이 흔들림. 적으면 브라우저가 animation을 가속화(그래픽카드) 시켜서 해결됨.*/
+  /* 문제없으면 안적어도됨*/
+  animation: heartBeat 1s linear infinite;
+}

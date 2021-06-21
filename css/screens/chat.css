@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 11000vh; /*스크롤 하기 위함*/
+  height: 500vh; /*스크롤 하기 위함*/
 }
 
 #chat-screen .alt-header,
@@ -21,11 +21,22 @@
   z-index: 1;
 }
 
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
 .main-chat {
-  margin-top: 120px; /*그냥은 위의 element들에 가려서 안보이게됨 main screen에 margin-top 줘서 해결.*/
+  margin-top: 180px; /*그냥은 위의 element들에 가려서 안보이게됨 main screen에 margin-top 줘서 해결.*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.8s linear;
 }
 
 .chat__timestamp {
@@ -111,6 +122,7 @@
   padding: 5px 25px;
   box-sizing: border-box;
   align-items: center;
+  transition: transform 0.3s ease-in-out; /* 이부분 없으면 자연스럽지 않음. 빠르게 변함*/
 }
 
 .reply .reply__column:first-child {
@@ -124,18 +136,20 @@
   padding: 12px;
   width: 100%; /*input에 width를 주기 위해서는 reply__column에 width가 있어야함. 그대로 위의 두개 적음*/
   border: var(--main-border);
-  border-radius: 20px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out; /* 이부분 없으면 자연스럽지 않음. 빠르게 변함*/
 }
 
 .reply__column:last-child > i,
 .reply__column:last-child button {
   position: absolute;
-  right: -20px;
+  right: 5px;
   top: 5px;
 }
 
 .reply__column:last-child i {
-  right: 18px;
+  right: 43px;
   top: 8px;
 }
 
@@ -158,4 +172,25 @@
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,/*.reply:focus-within 일때 .reply__column:first-child 에 적용*/
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply input:focus {
+  width: 98vw;
+  transform: translateX(-13%) translateY(-80px); /*다같이 내려가는걸 input창만 올림*/
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }
