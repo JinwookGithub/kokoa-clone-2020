@@ -36,6 +36,12 @@
   animation: notificationAnimation 2s ease-in-out infinite;
 }
 
+.nav__notification--dot {
+  position: absolute;
+  left: 25px; /* 가장 가까운 부모를 기준으로 움직이도록 하려면 부모가 relative*/
+  bottom: 25px;
+}
+
 @keyframes appearBtnAnimation {
   from {
     opacity: 0;

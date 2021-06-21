@@ -16,3 +16,9 @@
     display: none;
   }
 }
+
+@media screen and (orientation: portrait) {
+  #no-mobile {
+    display: none;
+  }
+}

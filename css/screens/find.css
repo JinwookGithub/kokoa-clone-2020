@@ -87,15 +87,15 @@
 }
 
 .open-post__heart-count {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 122, 122, 0.5);
   color: white;
   padding: 5px;
   border-radius: 20px;
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 5px;
+  right: 5px;
   font-size: 12px;
 }
 

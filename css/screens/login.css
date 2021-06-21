@@ -53,6 +53,11 @@
   border-color: var(--yellow);
 }
 
+#login-form input[type="text"]:focus::placeholder,
+#login-form input[type="password"]:focus::placeholder {
+  color: transparent;
+}
+
 #login-form input[type="submit"] {
   background-color: var(--yellow);
   cursor: pointer; /*not allowed, progressing 등가능*/
